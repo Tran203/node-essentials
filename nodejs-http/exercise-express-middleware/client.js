@@ -1,11 +1,16 @@
-const http = require("http");
+const http = require("http");//import http
 
+//request info
 http.get(
+  //check connection
   {
     port: 3000,
     hostname: "localhost",
     path: "/users",
-    headers: {},
+    headers: {
+      //check password
+      authorization: 'password'
+    },
   },
   (res) => {
     console.log("connected");
